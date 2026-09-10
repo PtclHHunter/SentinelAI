@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+
+# Backend runtime
+backend/data/sentinel.db
+backend/data/reports/*.pdf
+backend/reports/
+backend/*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Environment / secrets
+.env
+.env.*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# SentinelAI runtime dirs
+.sentinelai_pids/
+.sentinelai_logs/

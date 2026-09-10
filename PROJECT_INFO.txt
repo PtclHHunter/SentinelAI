@@ -1,0 +1,88 @@
+============================================================
+  SentinelAI — Project Information
+============================================================
+
+PROJECT DESCRIPTION
+-------------------
+SentinelAI is a cybersecurity web application that works like a
+mini Security Operations Center (SOC). It lets you upload or
+select log files, automatically detects threats using built-in
+rules, scans text for known malicious indicators, and helps you
+manage security investigations and generate reports. Everything
+runs on your own computer — no internet connection is needed
+while using the application.
+
+
+MAIN FEATURES
+-------------
+  - Security Dashboard: shows live charts of alerts, threats, and severity levels
+  - Log Analyzer: upload log files or use bundled samples, detects attacks automatically
+  - Threat Detection: 9 built-in rules for brute force, privilege escalation, suspicious IPs, and more
+  - IOC Scanner: paste any text to find IP addresses, domains, URLs, and file hashes
+  - Hash Analyzer: compute file hashes and check them against a local database of known threats
+  - Investigations: create cases, add notes, attach evidence, and track your progress
+  - Reports: generate PDF, JSON, or CSV reports for your investigations
+
+
+TECHNOLOGY USED
+---------------
+  Frontend:  React 18, TypeScript, Tailwind CSS, Chart.js
+  Backend:   Python, FastAPI, SQLAlchemy
+  Database:  SQLite (single file, no server needed)
+  Build:     Vite (frontend), Uvicorn (backend)
+
+
+SYSTEM REQUIREMENTS
+-------------------
+  - Windows 10 or Windows 11 (64-bit)
+  - Python 3.10 or newer
+  - Node.js 18 or newer (includes npm)
+  - At least 4 GB RAM (8 GB recommended)
+
+
+IMPORTANT NOTES
+---------------
+  * No API key required — the app uses only local, rule-based detection.
+  * No cloud account, no AI model, no external service needed.
+  * Works completely offline on localhost (127.0.0.1).
+  * Log files are read and parsed only — they are never executed.
+
+
+HOW TO DEMO THIS PROJECT (5 STEPS)
+------------------------------------
+
+Step 1 — Launch the application
+  Double-click the file "LAUNCH_SENTINELAI.bat" in the project
+  folder. Two terminal windows will open and the dashboard will
+  appear in your web browser.
+
+Step 2 — Show the Dashboard
+  The dashboard shows total events, total alerts, critical alerts,
+  severity charts, and threat trend graphs. If the database is
+  fresh, these numbers will be zero until you parse a log file.
+
+Step 3 — Parse a sample log
+  Click "Log Analyzer" in the left menu. You will see three
+  bundled sample files. Click "Parse" next to "auth_sample.log".
+  After a few seconds, the page shows the number of events found,
+  alerts generated, and a list of detected threats with severity
+  levels and confidence scores.
+
+Step 4 — Scan for IOCs
+  Click "IOC Scanner" in the left menu. Paste this text into the
+  text box and click "Scan for IOCs":
+
+    Connection from 192.0.2.1 to server port 22
+    C2 domain: evil.example.com
+    Malware hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+  The scanner extracts indicators and shows matches against the
+  local IOC database.
+
+Step 5 — Create an investigation and generate a report
+  Click "Investigations" and create a new investigation with a
+  title like "Demo Brute Force Case". Then click "Reports",
+  select your investigation, choose PDF format, and click
+  "Generate". The report is downloaded to your computer.
+
+============================================================

@@ -1,0 +1,35 @@
+============================================================
+  SentinelAI — System Requirements
+============================================================
+
+OPERATING SYSTEM
+  Windows 10 (64-bit) or Windows 11 (64-bit)
+
+REQUIRED SOFTWARE
+  1. Python 3.10 or newer
+     Download: https://www.python.org/downloads/
+     During installation, check "Add Python to PATH".
+
+  2. Node.js 18 LTS or newer (includes npm)
+     Download: https://nodejs.org
+     The LTS version is recommended.
+
+HARDWARE
+  RAM:      4 GB minimum, 8 GB recommended
+  Disk:     500 MB free space for application and dependencies
+  Display:  Any screen resolution (browser-based UI)
+
+NETWORK
+  Internet is required ONLY once — during initial dependency
+  installation (pip install and npm install). After that, the
+  running application requires NO internet connection.
+
+NOT REQUIRED
+  - No API key
+  - No cloud account (AWS, Azure, Google Cloud, etc.)
+  - No NVIDIA GPU or CUDA drivers
+  - No Docker or container runtime
+  - No external database server (MySQL, PostgreSQL, etc.)
+  - No VPN or special network configuration
+
+============================================================
